@@ -1,26 +1,32 @@
+
 function station()
-{
-  let x= document.getElementsByClassName("b1").value;
-  document.getElementsByClassName("b1").innerHTML= station_1 ;
+{   
+   console.log("functioncalled1");
+   fetch('http://52.203.100.234:5010/files/stops.txt')
+  .then(response => response.json())
+  .then(data => {
+    const stations= data;
+    var myJSON= JSON.stringify(stations,null,4);
+    document.getElementById('myStation').innerHTML=myJSON; 
+      
+  })
 
 }
 function price()
 {
-  let y= document.getElementsByClassName("b2").value;
-  document.getElementsByClassName("b2").innerHTML= fare;
-
+   console.log("functioncalled2");
+   fetch('http://52.203.100.234:5010/files/fare_attributes.txt')
+  .then(response => response.json())
+  .then(data => {
+    const fare= data;
+    var myJSON= JSON.stringify(fare,null,4);
+    document.getElementById('myPrice').innerHTML=myJSON; 
+      
+  })
 }
 
-let fares = [
-    {id_1: 20, id_2: 10, price: 'rs200'},
-    {id_1: 30, id_2: 20, price: 'rs300'},
-     {id_1: 40, id_2: 30, price: 'rs400'}
-];
-  let fare = fares.map((fares) =>({ origin_id:fares.id_1 , destint_id:fares.id_2 ,price: fares.price}));
-  
-let stations =[
-    {stationId: 20, stationName:'trivandrum'},
-    {stationId: 30, stationName:'kottayam'},
-    {stationId: 40, stationName:'kollam'}
-];
- let station_1 = stations.map((stations) =>({ stationid:stations.stationId , station_name:stations.sy}));
+
+
+
+
+

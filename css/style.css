@@ -14,15 +14,22 @@ body {
     background-image:url("/image/Journey.jpg");
     background-size: cover;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    
+    align-items: flex-start;
+    justify-content:center ;
   }
   h1{
     
     font-size: 80px;
-    color:white;
+    color:chartreuse;
   } 
+  #myStation{
+    color: white;
+    
+ }
+ #myPrice{
+  color: white;
+}
+
    
   .btn{
   display: flex;
@@ -38,5 +45,12 @@ body {
   padding: 10px 20px;
   background-color: palegreen;
   }
-
+.b2{
+  border: 1px solid #654321;
+  text-decoration: none;
+  color:teal;
+  font-size: 20px;
+  padding: 10px 20px;
+  background-color: palegreen;
+}
   
