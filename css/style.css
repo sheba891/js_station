@@ -11,8 +11,6 @@ body {
 
   .website_form {
     height: 100vh;
-    background-image:url("/image/Journey.jpg");
-    background-size: cover;
     display: flex;
     align-items: flex-start;
     justify-content:center ;
@@ -22,14 +20,22 @@ body {
     font-size: 80px;
     color:chartreuse;
   } 
-  #myStation{
-    color: white;
-    
+ .container{
+   display: flex;
+   justify-content: space-around;
+   padding: 30px;
+   margin: 1px 10px;
  }
- #myPrice{
-  color: white;
-}
+ .left_cont{
+   width: 300%;
+   text-align: justify;
+   margin: 0px 50px;
 
+ }
+ .right_cont{
+    text-align: justify;
+    margin: 0px 50px;
+ }
    
   .btn{
   display: flex;
